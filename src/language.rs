@@ -28,6 +28,10 @@ impl WordList {
     pub fn get_word_with_index(&self, idx: u16) -> &'static str {
         self.inner[idx as usize]
     }
+
+    pub fn get_word_list(&self) -> Vec<&'static str> {
+        self.inner.clone()
+    }
 }
 
 mod lazy {
